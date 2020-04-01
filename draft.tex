@@ -511,6 +511,101 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{获取预警信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 获取预警信息\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  系统通过分析得出可能发生情况时警示指挥人员\\
+\hline
+触发器 &  系统通过分析发现某区域人流量大或人员过度密集时\\
+\hline
+场景 & \begin{enumerate}
+	\item 系统综合分析从各种途径搜集得到的人员定位
+	\item 系统比较分析得出的人流量和人员密度是否超过系统设定的阈值
+	\item 如果超过则向指挥人员发出警告信息
+	\item 指挥人员根据现场情况选择是否响应这次预警
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{删除本地视频}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 删除本地视频\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员删除从前的参考价值不大的视频\\
+\hline
+触发器 &  指挥人员整理库存视频时评估某些视频为无用视频\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员整理库存视频
+	\item 指挥人员对视频进行评估
+	\item 如果得出参考价值不大的结论则删除视频
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{回看本地视频}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 回看本地视频\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员回看系统本地存储的视频\\
+\hline
+触发器 &  指挥人员想要通过以往的案例获得一些经验\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员选择库存的某段视频
+	\item 指挥人员观看该视频
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{指挥人员观看现场视频}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 指挥人员观看现场视频\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员观看前任人员或无人机传回的视频\\
+\hline
+触发器 &  指挥人员将视频信号切换到前线视频\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员将信号切换到前线信号（前线人员手持设备、无人机、摄像头等）
+	\item 指挥人员观看现场视频
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
 
 \subsection{前线人员}
 
