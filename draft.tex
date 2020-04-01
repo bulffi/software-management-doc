@@ -167,6 +167,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \item 信息部门拥有成熟的公众通知平台技术，可以及时在公众平台发布消息。
 \item 知识库部门拥有合适的文本挖掘机器模型，可以有效抽象提取信息，拥有文本分词和向量化模型，可以将文本转化为数字进行比对。
 \item 前线人员的设备拥有特殊的通信服务，从而保证加密和较大的带宽以保证通信。
+\item 我们需要向各个部门发放我们的终端系统，他们需要同意部署我们的终端系统用以交换数据
 \end{itemize}
 
 \chapter{详细需求}
@@ -210,10 +211,132 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 手持摄像设备 & 前线人员可以在前线开启手持摄像设备，并且将拍摄到的视频与指挥中心进行直播，从而以便于指挥中心可以清楚的看到现场的情况。 \\
 \hline
+各部门终端 & 我们的指挥人员需要通过各个部门的终端来向各个部门传递信息，从而做到高效保密的信息传输。\\
+\hline
 \end{longtable}
 \textbf{朋友们各自写自己需要的硬件哈}
 \section{功能性需求}
 \subsection{指挥人员}
+\subsubsection{向上级主管部门汇报}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向上级主管部门汇报\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  及时向上级主管部门汇报情况以便及时获得上级的指示\\
+\hline
+触发器 & 有突发事件，应急中心准备采取行动\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员根据现在的情况以及中心计划的反制方案制作报告
+	\item 指挥人员点击发送报告
+	\item 指挥人员可以看到该份报告的已读情况和可能的回复
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向公交部门建议运输方案调整}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向公交部门建议运输方案调整\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 & 向公交部门建议运输方案调整以便及时使用公共交通以尽快安排人员疏散 \\
+\hline
+触发器 & 指挥人员决定请求公交部门来一起控制人流 \\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员根据系统的建议以及专家和自己的分析完成一份关于交通运输方案调整的细节报告，包括地铁公交以及出租车等各方面的举措
+	\item 指挥人员选择发送该报告给公交部门
+	\item 指挥人员可以看到该报告的已读情况以及可能的回复信息
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心\\
+\hline
+\end{longtable}
+
+\subsubsection{向电信公司建议发送信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向电信公司建议发送信息\\
+\hline
+主参与者 &  指挥人员\\
+\hline
+情景目标 &向电信公司建议发送信息以便告知群众发生可能发生问题，并指导他们远离目标区域  \\
+\hline
+触发器 & 指挥人员决定请求电信公司帮助来疏散人流 \\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员起草关于建议电信服务商发送相应信息到某个范围内的人的文件
+	\item 指挥人员选择发送该文件到电信部门
+	\item 指挥人员可以看到该报告的已读情况以及可能的回复信息
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向急救部门建议行动}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向急救部门建议行动\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 & 向急救部门建议行动以期及时到达事故现场以便完成救治 \\
+\hline
+触发器 & 指挥人员发现可能出现人生安全事故 \\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员就可能出现人生安全事故的地点以及收集到的情况发送给急救中心的工作人员
+	\item 指挥人员可以看到该报告的已读情况以及可能的回复信息
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向交通部门指出要特别放行的对象}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向交通部门指出要特别放行的对象\\
+\hline
+主参与者 &指挥人员 \\
+\hline
+情景目标 &  向交通部门指出要特别放行的对象（例如特别牌照的公务车辆等）以期保证关键对象及时到达指定位置以完成相应的任务\\
+\hline
+触发器 &  指挥人员决定请求交通部门的帮助来缓解人群拥塞情况\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员根据系统建议、专家以及自己的意见起草一份有关建议在哪些区域进行禁行，哪些区域进行限流的报告
+	\item 指挥人员将文件发送给交通部门
+		\item 指挥人员可以看到该报告的已读情况以及可能的回复信息
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+
 \subsection{前线人员}
 
 \subsubsection{传递手持设备视频}
@@ -441,6 +564,31 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 
 \subsection{人群拥塞专家}
 \subsection{上级主管部门}
+
+\subsubsection{向拥塞控制中心批示行动}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向拥塞控制中心批示行动 \\
+\hline
+主参与者 & 上级部门负责人 \\
+\hline
+情景目标 & 向拥塞控制中心工作人员指示行动方案以期指导他们完成工作  \\
+\hline
+触发器 & 上级部门负责人接到拥塞控制中心的报告 \\
+\hline
+场景 & \begin{enumerate}
+	\item 上级部门负责人查看拥塞中心发出的报告
+	\item 上级部门负责人进行研究讨论与备案
+	\item 上级部门负责人向拥塞中心回复
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 上级部门终端 \\
+\hline
+\end{longtable}
+
 \subsection{群众}
 \subsection{公安急救公交交管电信部门}
 \subsubsection{获得公交安排的建议}
@@ -467,24 +615,27 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{获得发送短信内容以及区域的建议}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
 \hline
 \hline
-用例 &\\
+用例 & 获得发送短信内容以及区域的建议\\
 \hline
-主参与者 & \\
+主参与者 & 电信公司工作人员\\
 \hline
-情景目标 &  \\
+情景目标 & 获得发送短信内容以及区域的建议以便向指定区域内人员发送信息以向他们传达防拥塞建议 \\
 \hline
-触发器 & \\
+触发器 & 指挥人员对电信公司发布建议\\
 \hline
 场景 & \begin{enumerate}
-	\item 
+	\item 电信中心人员查看新到来的建议
+	\item 电信中心人员根据实际情况以及建议作出行动
+	\item 电信中心人员回复拥塞控制中心实际安排情况
 \end{enumerate} \\
 \hline
-参与者的连接渠道 & \\
+参与者的连接渠道 & 电信部门终端 \\
 \hline
 \end{longtable}
 
@@ -500,7 +651,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 	设计约束种类 & 约束内容 \\
 	\hline
 	\hline
-	语言类型& 系统使用JavaScript,Java,Python,SQL，HTML语言进行开发。\\
+	语言类型& 系统使用JavaScript，Java，Python，SQL，HTML语言进行开发。\\
 	\hline
 	数据库 & 系统使用Mysql，Redis，Hive，Hbase数据库系统。 \\
 	\hline
