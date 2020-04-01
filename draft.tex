@@ -139,6 +139,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 浩哥 \& 龙哥
 \section{假设与依赖}
 浩哥 \& 龙哥
+【我的前线人员设备要服务商的特殊网络，加密且快速】
 \chapter{详细需求}
 \section{外部接口}
 \subsection{用户接口}
@@ -166,7 +167,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \textbf{朋友们各自写自己需要的外部系统哈}
 
 \subsection{硬件设备接口}
-需要注意的是，我们的系统并不仅仅是一个软件系统，我们的系统还包括一些专门的硬件，它们主要是给前线人员所配备的专门设备，我们对这些设备简述如下。
+需要注意的是，我们的系统并不仅仅是一个软件系统，我们的系统还包括一些专门的硬件，它们主要是给前线人员所配备的专门设备（它们几乎都依赖与通信公司提供的特殊网络服务，从而保证安全性以及在人流量巨大的情况下仍然具有较高的带宽用于通信），我们对这些设备简述如下。
 \begin{longtable}{p{2cm}|p{10cm}}
 \hline
 设备名 & 设备用途 \\
@@ -185,26 +186,230 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \section{功能性需求}
 \subsection{指挥人员}
 \subsection{前线人员}
+
+\subsubsection{传递手持设备视频}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
 \hline
 \hline
-用例 & \\
+用例 & 传递手持设备视频 \\
 \hline
-主参与者 & \\
+主参与者 & 前线人员  \\
 \hline
-情景目标 & \\
+情景目标 & 向指挥部传递前线手持设备拍摄的视频，以便于指挥人员理解现场情况 \\
 \hline
-触发器 & \\
+触发器 & 前线人员打开手持拍摄设备 \\
 \hline
 场景 & \begin{enumerate}
-	\item 哈哈哈
+	\item 前线人员打开手持拍摄设备
+	\item 前线人员配置网络连接
+	\item 前线人员对重点地区进行拍摄，视频实时向指挥中心进行传递
+	\item 完成传递之后前线人员关闭设备并断开连接
 \end{enumerate} \\
 \hline
-参与者的连接渠道 & \\
+参与者的连接渠道 & 手持拍摄设备 \\
 \hline
 \end{longtable}
+
+\subsubsection{传递无人机视频}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 传递无人机视频 \\
+\hline
+主参与者 & 前线人员  \\
+\hline
+情景目标 & 向指挥中心传递前线无人机设备拍摄的实时画面从而使得指挥中心更好认识现场情况  \\
+\hline
+触发器 & 前线人员打开无人机 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员打开无人机设备
+	\item 前线人员设置连接信息
+	\item 前线人员将无人机升空到适当的高度
+	\item 无人机拍摄的视频实时向指挥中心进行传递
+	\item 完成传递之后前线人员关闭设备并断开连接
+\end{enumerate} \\
+\hline
+参与者的连接渠道 &  无人机\\
+\hline
+\end{longtable}
+
+\subsubsection{查看所处区域附近摄像头视频}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 查看所处区域附近摄像头视频 \\
+\hline
+主参与者 & 前线人员  \\
+\hline
+情景目标 & 查看自己所处位置附近的摄像头列表并选取其中某个放大观看以便于了解附近的情况  \\
+\hline
+触发器 & 指挥中心给前线人员赋予权限 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员使用显示设备查看自己权限范围中的各个摄像头视频的缩略视频
+	\item 前线人员可以选中其中的某个摄像头并放大，从而更自仔细观看该摄像头的情况
+	\item 前线人员使用完毕之后关闭显示设备
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 显示设备 \\
+\hline
+\end{longtable}
+
+\subsubsection{查看区域的综合热力图与拥塞情况分析}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 查看区域的综合热力图与拥塞情况分析\\
+\hline
+主参与者 & 前线人员  \\
+\hline
+情景目标 & 查看片区的人员聚集热力图以及拥塞情况报告从而判断地区中有拥塞可能的地区  \\
+\hline
+触发器 & 前线人员显示设备连接上线 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员显示设备连接上线
+	\item 前线人员查看到本地区的综合人流热力图以及各地的拥塞情况排名，其画面大概类似于指挥中心的情况
+	\item 前线人员使用完毕之后关闭显示设备
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 显示设备 \\
+\hline
+\end{longtable}
+
+\subsubsection{查看或完成指挥人员派发的任务}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 &  查看或完成指挥人员派发的任务\\
+\hline
+主参与者 &前线人员  \\
+\hline
+情景目标 &查看或者点击完成指挥人员派发的任务队列以便于了解现阶段的主要任务  \\
+\hline
+触发器 & 指挥中心有新的任务发派给前线人员 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员查看现在自己的任务列表
+	\item 前线人员点击其中的最高优先级任务进行查看
+	\item 前线人员在任务详情中可以看到该任务所要求的具体部署情况、其他各个部门的配合情况以及其他各个部门的工作人员的联系方式授权，以便前线人员可以通过系统来与他们沟通。
+	\item 前线人员在完成任务之后可以选择「完成任务」
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 加密通信设备\\
+\hline
+\end{longtable}
+
+\subsubsection{与指挥人员发送信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 &  与指挥人员发送信息\\
+\hline
+主参与者 & 前线人员  \\
+\hline
+情景目标 &  与指挥人员发送信息并查看对方回复以便于与指挥人员交流看法 \\
+\hline
+触发器 & 前线人员有事物需要报告 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员选择信息的等级与类型
+	\item 前线人员输入信息的内容
+	\item 如果需要前线人员还可以给该信息加入图片等文件
+	\item 前线人员完成编辑之后点击发送，之后可以看到指挥人员的已读状态以及可能的回复
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 加密通信设备 \\
+\hline
+\end{longtable}
+
+\subsubsection{与指挥人员语音对话}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 与指挥人员语音对话 \\
+\hline
+主参与者 &  指挥人员\\
+\hline
+情景目标 &  与指挥人员进行语音对话以便于进一步交流看法或者做紧急部署\\
+\hline
+触发器 & 前线人员有事物要进行汇报\\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员向指挥人员拨打通话
+	\item 如果指挥人员接听，则可以开始对话，而且对话将会录音保存
+	\item 如果到时指挥人员没有接听，则自动终止通话。
+\end{enumerate} \\
+\hline
+参与者的连接渠道 &加密通信设备 \\
+\hline
+\end{longtable}
+
+\subsubsection{提交工作报告}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 &  提交工作报告\\
+\hline
+主参与者 & 前线人员 \\
+\hline
+情景目标 &  在完成某些重大任务或者一定的时间期限之后向中心提交我的工作报告以期应急中心根据我的看法或者体会来充实知识库或者优化处理流程\\
+\hline
+触发器 & 前线人员完成某个任务之后\\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员打开报告界面
+	\item 前线人员对本次行动的各个方面进行评分
+	\item 前线人员书写本次行动中认为自己做的好的以及不足的，以及认为各个部分好的以及不足的地方
+	\item 前线人员提交报告
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 加密通信设备\\
+\hline
+\end{longtable}
+
+\subsubsection{与其他应急人员（公安消防急救等等）联络}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 与其他应急人员（公安消防急救等等）联络\\
+\hline
+主参与者 & 前线人员 \\
+\hline
+情景目标 &  在获得相应授权之后与同样获得指令来到前线的其他人员进行语音联络以便在前线协作指导各方工作\\
+\hline
+触发器 & 前线人员在指挥人员发出的任务或者信息中获得相应授权 \\
+\hline
+场景 & \begin{enumerate}
+	\item 前线人员获得联系授权
+	\item 前线人员选择要联系的部门，系统将会自动为他连线到被授权的该部门的工作人员的相应通信设备上
+	\item 前线人员可以和他交流相应的问题
+	\item 紧急事结束之后授权自动消失
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 加密通信设备\\
+\hline
+\end{longtable}
+
 \subsection{人群拥塞专家}
 \subsection{上级主管部门}
 \subsection{群众}
