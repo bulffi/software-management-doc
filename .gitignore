@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 *.*
 !*.tex
 !*.md
 !/img/*
 !.gitignore
+=======
+
+draft.zip
+>>>>>>> ea22d81909c688e27f97799099e18a71aaff336c
