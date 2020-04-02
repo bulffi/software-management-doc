@@ -263,6 +263,30 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \end{longtable}
 \section{功能性需求}
 \subsection{指挥人员}
+我们的拥塞控制中心的指挥人员将有以下的主要用例，现罗列如下表，在本节中我们将会一一就这些用例进行更为细致的描述。
+\begin{itemize}
+\item 向上级主管部门汇报
+\item 向公安部门建议行动
+\item 向公交部门建议运输方案调整
+\item 向电信公司建议发送信息
+\item 向急救部门建议行动
+\item 向交通部门建议调整城市交通
+\item 发送护送对象信息
+\item 向前线人员发布任务
+\item 与前线人员发送消息
+\item 与前线人员进行语言对话
+\item 查看前线人员的工作报告
+\item 存储视频
+\item 从网络舆情中获取信息
+\item 查看人员密度分布图
+\item 获取预警信息
+\item 删除本地视频
+\item 回看本地视频
+\item 指挥人员观看现场视频
+\item 查看系统推荐的解决方案
+\item 查看城市近期拥塞情况报告
+\item 查看数据收集情况 
+\end{itemize}
 \subsubsection{向上级主管部门汇报}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
@@ -286,7 +310,28 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 参与者的连接渠道 & 指挥中心 \\
 \hline
 \end{longtable}
-
+\subsubsection{向公安部门建议行动}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向公安部门建议行动\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  向公安部门及时建议行动，协助前线工作人员完成拥塞控制\\
+\hline
+触发器 &  得到上级的行动方案\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员选择所通知的公安部门
+	\item 指挥人员选择发送目标行动内容
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
 \subsubsection{向公交部门建议运输方案调整}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
@@ -358,7 +403,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
-\subsubsection{向交通部门指出要特别放行的对象}
+\subsubsection{向交通部门建议调整城市交通}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
@@ -368,7 +413,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 主参与者 &指挥人员 \\
 \hline
-情景目标 &  向交通部门指出要特别放行的对象（例如特别牌照的公务车辆等）以期保证关键对象及时到达指定位置以完成相应的任务\\
+情景目标 &  向交通部门指出希望可以禁行或者进行限流的区域，以便可以尽可能疏散人流\\
 \hline
 触发器 &  指挥人员决定请求交通部门的帮助来缓解人群拥塞情况\\
 \hline
@@ -382,6 +427,29 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{发送护送对象信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 发送护送对象信息\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员向交通部门发送护送对象信息以便于及时开道以保证对象以最快速度抵达\\
+\hline
+触发器 &  收到护送对象信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建护送任务
+	\item 指挥人员指定特定的交通部门
+	\item 指挥人员选择发布护送任务
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
 \subsubsection{向前线人员发布任务}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
@@ -722,7 +790,18 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 
 
 \subsection{前线人员}
-
+我们的前线人员将有以下的主要用例，现罗列如下表，在本节中我们会一一进行细致的描述。
+\begin{itemize}
+\item 传递手持设备视频
+\item 传递无人机视频
+\item 查看所处区域附近摄像头视频
+\item 查看区域的综合热力图与拥塞情况分析
+\item 查看或完成指挥人员派发的任务
+\item 与指挥人员发送信息
+\item 与指挥人员语音对话
+\item 提交工作报告
+\item 与其他应急人员（公安消防急救等等）联络
+\end{itemize}
 \subsubsection{传递手持设备视频}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
@@ -947,82 +1026,15 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \end{longtable}
 
 \subsection{人群拥塞专家}
-\subsection{上级主管部门}
-
-\subsubsection{向拥塞控制中心批示行动}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 向拥塞控制中心批示行动 \\
-\hline
-主参与者 & 上级部门负责人 \\
-\hline
-情景目标 & 向拥塞控制中心工作人员指示行动方案以期指导他们完成工作  \\
-\hline
-触发器 & 上级部门负责人接到拥塞控制中心的报告 \\
-\hline
-场景 & \begin{enumerate}
-	\item 上级部门负责人查看拥塞中心发出的报告
-	\item 上级部门负责人进行研究讨论与备案
-	\item 上级部门负责人向拥塞中心回复
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 上级部门终端 \\
-\hline
-\end{longtable}
-
-\subsection{群众}
-\subsection{公安急救公交交管电信部门}
-\subsubsection{获得公交安排的建议}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 获得公交安排的建议\\
-\hline
-主参与者 & 公交系统工作人员\\
-\hline
-情景目标 &  获得公交（地铁公交与出租车）安排的建议以便及时停止向某些地区输送乘客，只允许群众从那些区域中离开\\
-\hline
-触发器 & 指挥人员对公交系统人员发布建议\\
-\hline
-场景 & \begin{enumerate}
-	\item 公交人员查看通知
-	\item 公交人员根据自己部门的实际情况以及建议来进行安排（地铁公交与出租车相关）
-	\item 公交人员告知人群拥塞控制中心实际安排情况
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 公交部门终端\\
-\hline
-\end{longtable}
-
-\subsubsection{获得发送短信内容以及区域的建议}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 获得发送短信内容以及区域的建议\\
-\hline
-主参与者 & 电信公司工作人员\\
-\hline
-情景目标 & 获得发送短信内容以及区域的建议以便向指定区域内人员发送信息以向他们传达防拥塞建议 \\
-\hline
-触发器 & 指挥人员对电信公司发布建议\\
-\hline
-场景 & \begin{enumerate}
-	\item 电信中心人员查看新到来的建议
-	\item 电信中心人员根据实际情况以及建议作出行动
-	\item 电信中心人员回复拥塞控制中心实际安排情况
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 电信部门终端 \\
-\hline
-\end{longtable}
-
+我们的人群拥塞专家有以下的主要用例，现罗列在下表中，在本节中我们会一一进行更细致的描述。
+\begin{itemize}
+\item 向突发事件案例库添加案例
+\item 向突发事件策略库添加数据
+\item 向突发事件资源库添加数据
+\item 提交特征描述得到推荐的解决方案
+\item 查看前线人员报告
+\item 查看城市近期拥塞案例
+\end{itemize}
 \subsubsection{向突发事件案例库添加案例}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
@@ -1169,148 +1181,90 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
-\subsubsection{向公安部门建议行动}
+\subsection{上级主管部门}
+我们的上级主管部门有以下的主要用例，现罗列在下表中，在本节中我们会一一进行更细致的描述。
+\begin{itemize}
+\item 向拥塞控制中心批示行动
+\end{itemize}
+\subsubsection{向拥塞控制中心批示行动}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
 \hline
 \hline
-用例 & 向公安部门建议行动\\
+用例 & 向拥塞控制中心批示行动 \\
 \hline
-主参与者 & 指挥人员 \\
+主参与者 & 上级部门负责人 \\
 \hline
-情景目标 &  向公安部门及时建议行动，协助前线工作人员完成拥塞控制\\
+情景目标 & 向拥塞控制中心工作人员指示行动方案以期指导他们完成工作  \\
 \hline
-触发器 &  得到上级的行动方案\\
+触发器 & 上级部门负责人接到拥塞控制中心的报告 \\
 \hline
 场景 & \begin{enumerate}
-	\item 指挥人员选择所通知的公安部门
-	\item 指挥人员选择发送目标行动内容
+	\item 上级部门负责人查看拥塞中心发出的报告
+	\item 上级部门负责人进行研究讨论与备案
+	\item 上级部门负责人向拥塞中心回复
 \end{enumerate} \\
 \hline
-参与者的连接渠道 & 指挥中心 \\
+参与者的连接渠道 & 上级部门终端 \\
 \hline
 \end{longtable}
 
-\subsubsection{向预警附近区域发送预警短信}
+\subsection{群众}
+\subsection{公安急救公交交管电信部门}
+我们的公安急救公交交管电信部门（城市其他主要职能部门）有以下的主要用例，现罗列在下表中，在本节中我们会一一进行更细致的描述。
+\begin{itemize}
+\item 获得公交安排的建议
+\item 获得发送短信内容以及区域的建议 
+\end{itemize}
+\subsubsection{获得公交安排的建议}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
 \hline
 \hline
-用例 & 向预警附近区域发送预警短信\\
+用例 & 获得公交安排的建议\\
 \hline
-主参与者 & 指挥人员 \\
+主参与者 & 公交系统工作人员\\
 \hline
-情景目标 &  通过预警短信使民众了解到突发事故的详细状况并分析现在所处的环境，帮助不知情的受灾群众做出正确的疏散举措\\
+情景目标 &  获得公交（地铁公交与出租车）安排的建议以便及时停止向某些地区输送乘客，只允许群众从那些区域中离开\\
 \hline
-触发器 &  无\\
+触发器 & 指挥人员对公交系统人员发布建议\\
 \hline
 场景 & \begin{enumerate}
-	\item 指挥人员创建预警短信内容
-	\item 指挥人员指定预警区域范围
-	\item 指挥人员选择发布预警短信
+	\item 公交人员查看通知
+	\item 公交人员根据自己部门的实际情况以及建议来进行安排（地铁公交与出租车相关）
+	\item 公交人员告知人群拥塞控制中心实际安排情况
 \end{enumerate} \\
 \hline
-参与者的连接渠道 & 指挥中心 \\
+参与者的连接渠道 & 公交部门终端\\
 \hline
 \end{longtable}
 
-\subsubsection{发送护送对象信息}
+\subsubsection{获得发送短信内容以及区域的建议}
 \begin{longtable}{p{2cm} | p{10cm}}
 \hline
 项目名 & 详述 \\
 \hline
 \hline
-用例 & 发送护送对象信息\\
+用例 & 获得发送短信内容以及区域的建议\\
 \hline
-主参与者 & 指挥人员 \\
+主参与者 & 电信公司工作人员\\
 \hline
-情景目标 &  指挥人员向交通部门发送护送对象信息以便于及时开道以保证对象以最快速度抵达\\
+情景目标 & 获得发送短信内容以及区域的建议以便向指定区域内人员发送信息以向他们传达防拥塞建议 \\
 \hline
-触发器 &  收到护送对象信息\\
+触发器 & 指挥人员对电信公司发布建议\\
 \hline
 场景 & \begin{enumerate}
-	\item 指挥人员创建护送任务
-	\item 指挥人员指定特定的交通部门
-	\item 指挥人员选择发布护送任务
+	\item 电信中心人员查看新到来的建议
+	\item 电信中心人员根据实际情况以及建议作出行动
+	\item 电信中心人员回复拥塞控制中心实际安排情况
 \end{enumerate} \\
 \hline
-参与者的连接渠道 & 指挥中心 \\
+参与者的连接渠道 & 电信部门终端 \\
 \hline
 \end{longtable}
 
-\subsubsection{发送交通方面安排建议}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 发送交通方面安排建议\\
-\hline
-主参与者 & 指挥人员 \\
-\hline
-情景目标 &  指挥人员向交通部门发送就交通系统的建议以便于及时安排交通方面措施以疏散人流\\
-\hline
-触发器 &  收到推荐方案信息\\
-\hline
-场景 & \begin{enumerate}
-	\item 指挥人员创建交通方面安排建议
-	\item 指挥人员指定特定的交通部门
-	\item 指挥人员选择发布交通方面安排建议
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 指挥中心 \\
-\hline
-\end{longtable}
-
-\subsubsection{发送急救方面安排建议}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 发送急救方面安排建议\\
-\hline
-主参与者 & 指挥人员 \\
-\hline
-情景目标 &  指挥人员向急救中心部门发送就医疗系统的建议以便于及时安排人员尽快赶赴现场营救伤者\\
-\hline
-触发器 &  收到推荐方案信息\\
-\hline
-场景 & \begin{enumerate}
-	\item 指挥人员创建急救方面安排建议
-	\item 指挥人员指定特定的急救中心
-	\item 指挥人员选择发布急救方面安排建议
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 指挥中心 \\
-\hline
-\end{longtable}
-
-\subsubsection{发送公安方面安排建议}
-\begin{longtable}{p{2cm} | p{10cm}}
-\hline
-项目名 & 详述 \\
-\hline
-\hline
-用例 & 发送公安方面安排建议\\
-\hline
-主参与者 & 指挥人员 \\
-\hline
-情景目标 &  指挥人员向公安系统发送就公安方面的建议以便于及时调派警力以帮助缓解拥塞情况\\
-\hline
-触发器 &  收到推荐方案信息\\
-\hline
-场景 & \begin{enumerate}
-	\item 指挥人员创建公安方面安排建议
-	\item 指挥人员指定特定的公安系统
-	\item 指挥人员选择发布公安方面安排建议
-\end{enumerate} \\
-\hline
-参与者的连接渠道 & 指挥中心 \\
-\hline
-\end{longtable}
 
 
 
