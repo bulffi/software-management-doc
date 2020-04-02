@@ -948,7 +948,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 用例 & 向突发事件案例库添加案例\\
 \hline
-主参与者 & 监管中心工作人员\\
+主参与者 & 拥塞防控专家\\
 \hline
 情景目标 & 在新突发事件出现之后，将本次实践的特征数据保存至知识库 \\
 \hline
@@ -972,7 +972,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 用例 & 向突发事件策略库添加数据\\
 \hline
-主参与者 & 监管中心工作人员\\
+主参与者 & 拥塞防控专家\\
 \hline
 情景目标 & 获得发送在突发事件案例库内新添内容，提取处理方法集合添加到策略库 \\
 \hline
@@ -995,7 +995,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 用例 & 向突发事件资源库添加数据\\
 \hline
-主参与者 & 监管中心工作人员\\
+主参与者 & 拥塞防控专家\\
 \hline
 情景目标 & 在突发事件案例库新添内容后，提取处理该案例所需要使用的各类资源集合 \\
 \hline
@@ -1019,7 +1019,7 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 用例 & 提交特征描述得到推荐的解决方案\\
 \hline
-主参与者 & 监管中心工作人员\\
+主参与者 & 拥塞防控专家\\
 \hline
 情景目标 & 当突发事件发生时，应急人员向系统提交当前突发事件的特征描述 \\
 \hline
@@ -1039,6 +1039,195 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{查看前线人员报告}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 查看前线人员报告\\
+\hline
+主参与者 & 拥塞防控专家\\
+\hline
+情景目标 & 通过查看实地报告，更新突发事件的特征描述 \\
+\hline
+触发器 & 前线人员报告提交\\
+\hline
+场景 & \begin{enumerate}
+	\item 工作人员收到报告提交消息
+	\item 工作人员点击进入报告内容
+	\item 工作人员分析报告内容选择更新事件特征描述
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{查看城市近期拥塞案例}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 查看城市近期拥塞案例\\
+\hline
+主参与者 & 拥塞防控专家\\
+\hline
+情景目标 & 通过查看近期城市拥塞案例，更好的理解近期城市整体拥塞情况 \\
+\hline
+触发器 & 无\\
+\hline
+场景 & \begin{enumerate}
+	\item 工作人员选择城市
+	\item 系统返回最近城市近期拥塞案例
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向公安部门建议行动}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向公安部门建议行动\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  向公安部门及时建议行动，协助前线工作人员完成拥塞控制\\
+\hline
+触发器 &  得到上级的行动方案\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员选择所通知的公安部门
+	\item 指挥人员选择发送目标行动内容
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向预警附近区域发送预警短信}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向预警附近区域发送预警短信\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  通过预警短信使民众了解到突发事故的详细状况并分析现在所处的环境，帮助不知情的受灾群众做出正确的疏散举措\\
+\hline
+触发器 &  无\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建预警短信内容
+	\item 指挥人员指定预警区域范围
+	\item 指挥人员选择发布预警短信
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{发送护送对象信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 发送护送对象信息\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员向交通部门发送护送对象信息以便于及时开道以保证对象以最快速度抵达\\
+\hline
+触发器 &  收到护送对象信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建护送任务
+	\item 指挥人员指定特定的交通部门
+	\item 指挥人员选择发布护送任务
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{发送交通方面安排建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 发送交通方面安排建议\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员向交通部门发送就交通系统的建议以便于及时安排交通方面措施以疏散人流\\
+\hline
+触发器 &  收到推荐方案信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建交通方面安排建议
+	\item 指挥人员指定特定的交通部门
+	\item 指挥人员选择发布交通方面安排建议
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{发送急救方面安排建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 发送急救方面安排建议\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员向急救中心部门发送就医疗系统的建议以便于及时安排人员尽快赶赴现场营救伤者\\
+\hline
+触发器 &  收到推荐方案信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建急救方面安排建议
+	\item 指挥人员指定特定的急救中心
+	\item 指挥人员选择发布急救方面安排建议
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{发送公安方面安排建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 发送公安方面安排建议\\
+\hline
+主参与者 & 指挥人员 \\
+\hline
+情景目标 &  指挥人员向公安系统发送就公安方面的建议以便于及时调派警力以帮助缓解拥塞情况\\
+\hline
+触发器 &  收到推荐方案信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 指挥人员创建公安方面安排建议
+	\item 指挥人员指定特定的公安系统
+	\item 指挥人员选择发布公安方面安排建议
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 指挥中心 \\
+\hline
+\end{longtable}
 
 
 
