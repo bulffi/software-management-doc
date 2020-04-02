@@ -1216,6 +1216,10 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \begin{itemize}
 \item 获得公交安排的建议
 \item 获得发送短信内容以及区域的建议 
+\item 公安部门获得行动建议
+\item 急救部门获得行动建议
+\item 交通部门获得调整城市交通建议
+\item 获得护送对象信息
 \end{itemize}
 \subsubsection{获得公交安排的建议}
 \begin{longtable}{p{2cm} | p{10cm}}
@@ -1265,6 +1269,101 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{公安部门获得行动建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 公安部门获得行动建议\\
+\hline
+主参与者 & 公安部门人员 \\
+\hline
+情景目标 &  公安部门获得建议行动，以便于协助前线工作人员完成拥塞控制\\
+\hline
+触发器 &  指挥人员对公安部门发布建议\\
+\hline
+场景 & \begin{enumerate}
+	\item 公安部门人员查看新到来的建议
+	\item 公安部门人员根据实际情况以及建议作出行动
+	\item 公安部门人员回复拥塞控制中心实际安排情况
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 公安部门终端 \\
+\hline
+\end{longtable}
+
+\subsubsection{急救部门获得行动建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 急救部门获得行动建议\\
+\hline
+主参与者 & 急救部门人员 \\
+\hline
+情景目标 & 急救部门获得行动建议以期及时到达事故现场以便完成救治 \\
+\hline
+触发器 & 指挥人员对急救部门发布行动建议 \\
+\hline
+场景 & \begin{enumerate}
+	\item 急救中心人员收到可能出现人生安全事故的地点以及收集到的情况
+	\item 急救中心人员根据实际情况以及建议作出行动
+	\item 急救部门人员回复拥塞控制中心实际安排工作
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 急救部门终端 \\
+\hline
+\end{longtable}
+
+\subsubsection{交通部门获得调整城市交通建议}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 交通部门获得调整城市交通建议\\
+\hline
+主参与者 &交通部门人员 \\
+\hline
+情景目标 &  交通部门获得希望可以禁行或者进行限流的区域建议，以便可以尽可能疏散人流\\
+\hline
+触发器 &  指挥人员对交通部门发布建议\\
+\hline
+场景 & \begin{enumerate}
+	\item 交通部门人员获得在哪些区域进行禁行，哪些区域进行限流的报告
+	\item 交通部门人员根据实际情况以及建议做出行动
+	\item 交通部门人员回复拥塞控制中心实际安排工作
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 交通部门终端 \\
+\hline
+\end{longtable}
+
+\subsubsection{获得护送对象信息}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 获得护送对象信息\\
+\hline
+主参与者 & 交通部门人员 \\
+\hline
+情景目标 &  交通部门获得护送对象信息以便于及时开道以保证对象以最快速度抵达\\
+\hline
+触发器 &  指挥人员对交通部门发布护送对象信息\\
+\hline
+场景 & \begin{enumerate}
+	\item 交通部门收到具体护送对象信息
+	\item 交通部门人员根据实际情况以及建议做出行动
+	\item 交通部门人员回复拥塞控制中心实际安排工作
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 交通部门终端 \\
+\hline
+\end{longtable}
 
 
 
