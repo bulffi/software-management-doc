@@ -940,6 +940,105 @@ WIFI辅助定位 & 利用现有的无线网络，配合WIFI标签和相关的移
 \hline
 \end{longtable}
 
+\subsubsection{向突发事件案例库添加案例}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向突发事件案例库添加案例\\
+\hline
+主参与者 & 监管中心工作人员\\
+\hline
+情景目标 & 在新突发事件出现之后，将本次实践的特征数据保存至知识库 \\
+\hline
+触发器 & 新突发事件出现\\
+\hline
+场景 & \begin{enumerate}
+	\item 工作人员选择记录案例文件输入
+	\item 工作人员汇总新出现突发事件案例分为：案例名，事件主体，特征描述，处理方法的四元组
+	\item 将四元组存放入案例库
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向突发事件策略库添加数据}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向突发事件策略库添加数据\\
+\hline
+主参与者 & 监管中心工作人员\\
+\hline
+情景目标 & 获得发送在突发事件案例库内新添内容，提取处理方法集合添加到策略库 \\
+\hline
+触发器 & 突发事件案例库内新添内容\\
+\hline
+场景 & \begin{enumerate}
+	\item 从案例对象中通过文本挖掘模型抽象出规则
+	\item 将新规则添加到突发事件策略库中
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{向突发事件资源库添加数据}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 向突发事件资源库添加数据\\
+\hline
+主参与者 & 监管中心工作人员\\
+\hline
+情景目标 & 在突发事件案例库新添内容后，提取处理该案例所需要使用的各类资源集合 \\
+\hline
+触发器 & 突发事件案例库新添内容\\
+\hline
+场景 & \begin{enumerate}
+	\item 从案例对象中的处理方法中提取应急资源集合
+	\item 从案例对象的事件特征中提取应急资源集合
+	\item 将新应急资源集合添加到突发事件资源库中
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
+\subsubsection{提交特征描述得到推荐的解决方案}
+\begin{longtable}{p{2cm} | p{10cm}}
+\hline
+项目名 & 详述 \\
+\hline
+\hline
+用例 & 提交特征描述得到推荐的解决方案\\
+\hline
+主参与者 & 监管中心工作人员\\
+\hline
+情景目标 & 当突发事件发生时，应急人员向系统提交当前突发事件的特征描述 \\
+\hline
+触发器 & 应急人员提交特征描述\\
+\hline
+场景 & \begin{enumerate}
+	\item 工作人员输入突发事件的特征描述
+	\item 经文本分析，分词向量化后产生特征向量
+	\item 向案例库查询相关案例，得到案例集合
+	\item 与每一个案例比对相似度，与阈值比较
+	\item 得到最终案例集合
+	\item 查找与最终集合相关的资源库数据和策略库数据
+	\item 返回推荐的方案
+\end{enumerate} \\
+\hline
+参与者的连接渠道 & 监管中心 \\
+\hline
+\end{longtable}
+
 
 
 
